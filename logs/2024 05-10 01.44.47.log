@@ -1,8 +1,0 @@
-[2024-05-10 01:44:47][logger.py] INFO: Удалены лишние лог-файлы: 0
-[2024-05-10 01:44:47][logger.py] INFO: Текущий лог-файл: 2024 05-10 01.44.47.log
-[2024-05-10 01:44:50][logger.py] INFO: Поучено 3 пользователей
-[2024-05-10 01:44:50][logger.py] INFO: 1744691089
-[2024-05-10 01:44:50][logger.py] INFO: Retrieved user 6034429696's referals: ('',)
-[2024-05-10 01:44:50][logger.py] ERROR: Error adding referal 1744691089 to user 6034429696: 'list' object has no attribute 'split'
-[2024-05-10 01:44:50][logger.py] INFO: Updated user 6034429696's from_referal to 1744691089
-[2024-05-10 01:44:50][logger.py] INFO: 6034429696 стал рефералом 1744691089'a

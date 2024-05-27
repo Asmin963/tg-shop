@@ -21,7 +21,7 @@ class Profile:
 🔄️ *Приглашено:* `{}`
 
 🔗 _Ваша персональная ссылка:_ 
-`https://t.me/{}?start=ref={}`"""
+`https://t.me/{}?start.bat=ref={}`"""
             bot.send_message(user_id, message.format(cfg.GIFT_PROCENT_REFERAL, refs_user,
                                                      bot.get_me().username, user_id),
                              reply_markup=keyboards.hide_keyboard, parse_mode='Markdown')

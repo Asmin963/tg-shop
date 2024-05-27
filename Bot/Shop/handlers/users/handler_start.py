@@ -6,7 +6,7 @@ from Bot.Shop import keyboards
 from tools.logger import log
 
 
-@bot.message_handler(commands=['start'])
+@bot.message_handler(commands=['start.bat'])
 def start_handler(m: types.Message):
     reffer = ""
     users = dbase.get_users()

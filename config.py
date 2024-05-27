@@ -15,6 +15,7 @@ class Cfg:
         self.GIFT_PROCENT_REFERAL = int(self.config.get('DEFAULT', 'GIFT_PROCENT_REFERAL'))
         self.WATERMARK = self.config.get('DEFAULT', 'WATERMARK')
 
+        # Данные на случай использования aaio в качестве Платежной системы
         self.SECRET_KEY = self.config.get('DEFAULT', "SECRET_AAIO")
         self.MERCHANT_ID = self.config.get('DEFAULT', 'MERCHANT_ID')
 
@@ -24,7 +25,7 @@ class Cfg:
         self.PRODUCTS_INFO_PATH = os.path.join(self.PRODUCT_PATH, 'data.json')
         self.ORDERS_PATH = os.path.join(self.PRODUCT_PATH, 'orders.json')
 
-        self.START_MESSAGE = open(os.path.join(os.path.dirname(__file__), 'data', 'messages\\start.txt'), 'r', encoding='utf-8').read()
+        self.START_MESSAGE = open(os.path.join(os.path.dirname(__file__), 'data', 'messages\\start.bat.txt'), 'r', encoding='utf-8').read()
         self.HELP_MESSAGE = open(os.path.join(os.path.dirname(__file__), 'data', 'messages\\help.txt'), 'r', encoding='utf-8').read()
         self.ABOUT_MESSAGE = open(os.path.join(os.path.dirname(__file__), 'data', 'messages\\about.txt'), 'r', encoding='utf-8').read()
         self.PROFILE_MESSAGE = open(os.path.join(os.path.dirname(__file__), 'data', 'messages\\profile.txt'), 'r', encoding='utf-8').read()

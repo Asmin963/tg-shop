@@ -1,0 +1,4 @@
+pyTelegramBotAPI
+hashlib
+urllib
+configparser
