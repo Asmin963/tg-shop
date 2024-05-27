@@ -10,8 +10,8 @@ class Cfg:
 
         self.TOKEN = self.config.get('DEFAULT', 'TOKEN')
         self.ADMINS = self.config.get('DEFAULT', 'ADMINS').split(',')
-        if cfg.ADMINS:
-            cfg.ADMINS = list(map(int, cfg.ADMINS))
+        if self.ADMINS:
+            self.ADMINS = list(map(int, self.ADMINS))
         self.REQUIRED_SUBSCRIPTIONS = self.config.get('DEFAULT', 'REQUIRED_SUBSCRIPTIONS')
         self.NEW_USER_NOTIFICATIONS = self.config.get('DEFAULT', 'NEW_USER_NOTIFICATIONS')
         self.GIFT_PROCENT_REFERAL = int(self.config.get('DEFAULT', 'GIFT_PROCENT_REFERAL'))
