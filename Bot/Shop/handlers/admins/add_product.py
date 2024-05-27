@@ -19,12 +19,6 @@ def add_lot_handler(m: types.Message):
           'from=add_lot_handler-func=new_category'))
     bot.send_message(m.chat.id, '*Выберите категорию:*', parse_mode='Markdown', reply_markup=M)
 
-    """
-
-    Набор функций для создания категории
-
-    """
-
 
 def new_category(call):
     M = types.ReplyKeyboardMarkup(resize_keyboard=True).add(types.KeyboardButton('❌ Отменить'))
