@@ -7,8 +7,8 @@ from colorama import Fore, Style
 
 from config import cfg
 
-if not cfg.LOG_PATH:
-    os.mkdir(cfg.LOG_PATH)
+if not os.path.exists(cfg.LOG_PATH):
+    os.makedirs(cfg.LOG_PATH)
 
 logging.basicConfig(
     handlers=[logging.FileHandler(

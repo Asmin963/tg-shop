@@ -25,7 +25,7 @@ class Cfg:
         self.PRODUCTS_INFO_PATH = os.path.join(self.PRODUCT_PATH, 'data.json')
         self.ORDERS_PATH = os.path.join(self.PRODUCT_PATH, 'orders.json')
 
-        self.START_MESSAGE = open(os.path.join(os.path.dirname(__file__), 'data', 'messages\\start.bat.txt'), 'r', encoding='utf-8').read()
+        self.START_MESSAGE = open(os.path.join(os.path.dirname(__file__), 'data', 'messages\\start.txt'), 'r', encoding='utf-8').read()
         self.HELP_MESSAGE = open(os.path.join(os.path.dirname(__file__), 'data', 'messages\\help.txt'), 'r', encoding='utf-8').read()
         self.ABOUT_MESSAGE = open(os.path.join(os.path.dirname(__file__), 'data', 'messages\\about.txt'), 'r', encoding='utf-8').read()
         self.PROFILE_MESSAGE = open(os.path.join(os.path.dirname(__file__), 'data', 'messages\\profile.txt'), 'r', encoding='utf-8').read()
