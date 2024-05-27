@@ -7,6 +7,9 @@ from colorama import Fore, Style
 
 from config import cfg
 
+if not cfg.LOG_PATH:
+    os.mkdir(cfg.LOG_PATH)
+
 logging.basicConfig(
     handlers=[logging.FileHandler(
         filename=f"{cfg.LOG_PATH}/{strftime('%Y %m-%d %H.%M.%S')}.log",
