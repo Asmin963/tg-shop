@@ -12,7 +12,7 @@ if not cfg.LOG_PATH:
 
 logging.basicConfig(
     handlers=[logging.FileHandler(
-        filename=f"{cfg.LOG_PATH}/{strftime('%Y %m-%d %H.%M.%S')}.log",
+        filename=f"{cfg.LOG_PATH}/{strftime('%Y-%m-%d_%H.%M.%S')}.log",
         encoding='utf-8', mode='a+')
     ],
     format="[%(asctime)s][%(filename)s] %(levelname)s: %(message)s",
