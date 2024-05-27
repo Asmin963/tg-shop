@@ -46,11 +46,11 @@ class Database:
             log(f"Added user {user_id}", lvl=1)
         except sqlite3.IntegrityError as e:
             if "UNIQUE" in str(e):
-                log(f"Пользователь {user_id} уже существует", lvl=2)
+                log(f"Пользователь {user_id} уже есть", lvl=2)
             else:
-                log(f"Error adding user {user_id}: {str(e)}", lvl=3)
+                log(f"Ошибка при добавлении пользователя {user_id}: {str(e)}", lvl=3)
         except Exception as e:
-            log(f"Error adding user {user_id}: {str(e)}", lvl=3)
+            log(f"Ошибка при добавлении пользователя {user_id}: {str(e)}", lvl=3)
         finally:
             conn.close()
 
@@ -67,9 +67,9 @@ class Database:
                                WHERE user_id = ?''', (value, user_id))
 
             conn.commit()
-            log(f"Updated user {user_id}'s {column} to {value}", lvl=1)
+            log(f"Обновлен пользователь {user_id}. {column} в {value}", lvl=1)
         except Exception as e:
-            log(f"Error updating user {user_id}'s {column}: {str(e)}", lvl=3)
+            log(f"Ошибка обновления пользователя {user_id}'s {column}: {str(e)}", lvl=3)
         finally:
             conn.close()
 
@@ -79,10 +79,10 @@ class Database:
             if balance is None:
                 balance = 0
             self.update_user_column(user_id, 'balance', balance + bonus)
-            log(f"Added bonus {bonus} to user {user_id}", lvl=1)
+            log(f"Пользователю добавлен бонус {bonus}. {user_id}", lvl=1)
             return True
         except Exception as e:
-            log(f"Error adding bonus {bonus} to user {user_id}: {str(e)}", lvl=3)
+            log(f"Ошибка добавления бонуса {bonus} пользователю {user_id}: {str(e)}", lvl=3)
             return False
 
     def refill_procent(self, user_id, bonus):
@@ -128,7 +128,7 @@ class Database:
                 log(f"User {user_id} not found", lvl=1)
                 return None
         except Exception as e:
-            log(f"Error retrieving user {user_id}'s {column}: {str(e)}", lvl=3)
+            log(f"Ошибка при получении пользователя {user_id}'s {column}: {str(e)}", lvl=3)
         finally:
             conn.close()
 
@@ -142,9 +142,9 @@ class Database:
                                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)''', user_data)
 
             conn.commit()
-            log(f"Processed new user: {user_data}", lvl=1)
+            log(f"Обработан новый пользователь: {user_data}", lvl=1)
         except Exception as e:
-            log(f"Error processing new user: {str(e)}", lvl=3)
+            log(f"Ошибка обработки нового пользователя: {str(e)}", lvl=3)
         finally:
             conn.close()
 
@@ -160,13 +160,13 @@ class Database:
             if result:
                 register_date = dt.datetime.strptime(result[0], '%Y-%m-%d').date()
                 days_since_registration = (dt.date.today() - register_date).days
-                log(f"User {user_id} registered {days_since_registration} days ago", lvl=1)
+                log(f"Пользователь {user_id} зарегистрировался {days_since_registration} дн. назад", lvl=1)
                 return days_since_registration
             else:
-                log(f"User {user_id} not found for registration date", lvl=1)
+                log(f"Пользователь {user_id} не найден на дату регистрации", lvl=1)
                 return None
         except Exception as e:
-            log(f"Error retrieving user {user_id}'s registration date: {str(e)}", lvl=3)
+            log(f"Eошибка при получении даты регистрации пользователя {user_id}: {str(e)}", lvl=3)
         finally:
             conn.close()
 
@@ -195,9 +195,9 @@ class Database:
 
             cursor.execute(f'''SELECT {column} FROM {self.table_users}''')
             result = cursor.fetchall()
-            log(f"Retrieved {len(result)} users", lvl=1)
+            log(f"Получено пользователей: {len(result)}", lvl=1)
         except Exception as e:
-            log(f"Error retrieving users: {str(e)}", lvl=3)
+            log(f"Ошибка при получении пользователей: {str(e)}", lvl=3)
             result = None
         finally:
             conn.close()
@@ -214,7 +214,7 @@ class Database:
                 return True
             return False
         except Exception as e:
-            log(f"Error adding referal {referal_id} to user {user_id}: {str(e)}", lvl=3)
+            log(f"Ошибка при добавлении реферала {referal_id} пользователя {user_id}: {str(e)}", lvl=3)
             return False
 
 
