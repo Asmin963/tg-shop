@@ -11,6 +11,7 @@ import tools
 if __name__ == "__main__":
     while True:
         try:
+            log('Бот запущен!')
             bot.polling(non_stop=True)
         except Exception as e:
             log(f'Ошибка при работе бота - {e}', lvl=3)
