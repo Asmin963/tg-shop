@@ -1,0 +1,28 @@
+[2024-05-10 02:01:44][logger.py] INFO: Удалены лишние лог-файлы: 0
+[2024-05-10 02:01:44][logger.py] INFO: Текущий лог-файл: 2024 05-10 02.01.44.log
+[2024-05-10 02:01:49][logger.py] INFO: Получены данные callback - {'func': 'open_category', 'category': '49654'}
+[2024-05-10 02:01:50][logger.py] INFO: Получены данные callback - {'func': 'open_product', 'cat': '49654', 'prod': '62536'}
+[2024-05-10 02:01:50][logger.py] INFO: Лота нет в изобранном
+[2024-05-10 02:01:52][logger.py] INFO: Получены данные callback - {'func': 'open_category', 'cat': '49654'}
+[2024-05-10 02:01:52][logger.py] INFO: Получены данные callback - {'func': 'open_product', 'cat': '49654', 'prod': '97010'}
+[2024-05-10 02:01:52][logger.py] WARNING: Товар 97010 уже есть в избранном
+[2024-05-10 02:01:52][logger.py] INFO: Лот уже есть в изобранном
+[2024-05-10 02:01:54][logger.py] INFO: Получены данные callback - {'func': 'buy', 'cat': '49654', 'prod': '97010', 'count': '8'}
+[2024-05-10 02:01:54][logger.py] INFO: Retrieved user 6034429696's balance: (0,)
+[2024-05-10 02:01:54][logger.py] INFO: Retrieved user 6034429696's balance: (0,)
+[2024-05-10 02:01:54][logger.py] INFO: Сохранил новый заказ в файл JSON
+[2024-05-10 02:01:54][logger.py] INFO: Retrieved user 6034429696's balance: (0,)
+[2024-05-10 02:01:54][logger.py] INFO: Retrieved user 6034429696's balance: (0,)
+[2024-05-10 02:01:54][logger.py] INFO: Updated user 6034429696's balance to 0
+[2024-05-10 02:01:54][logger.py] INFO: Added bonus 0 to user 6034429696
+[2024-05-10 02:01:56][logger.py] INFO: Получены данные callback - {'func': 'check_status_order', 'order': 'exJHjthY5g'}
+[2024-05-10 02:01:56][logger.py] INFO: Обновил кол-во товаров. Номер товара - 97010. Номер - категории - 49654
+[2024-05-10 02:01:56][logger.py] INFO: Отправил файл с товарами юзеру - 6034429696. Номер товара - 97010. Номер - категории - 49654
+[2024-05-10 02:01:56][logger.py] ERROR: Пользователь 6034429696 оплатил заказ exJHjthY5g
+[2024-05-10 02:01:56][logger.py] INFO: Retrieved user 6034429696's from_referal: ('1744691089',)
+[2024-05-10 02:01:56][logger.py] INFO: Retrieved user 1744691089's balance: (0,)
+[2024-05-10 02:01:56][logger.py] INFO: Updated user 1744691089's balance to 400.0
+[2024-05-10 02:01:56][logger.py] INFO: Added bonus 400.0 to user 1744691089
+[2024-05-10 02:01:56][logger.py] ERROR: Пользователь 6034429696 получил 8000 рублей за оплату заказа exJHjthY5g
+[2024-05-10 02:02:00][logger.py] INFO: Retrieved user 1744691089's *: (1744691089, 'чак-чак', None, 'ru', 'arthells', '2024-05-09 15:48:28.349371', '', 0, '', 0, '', 400)
+[2024-05-10 02:02:35][logger.py] INFO: Получены данные callback - {'func': 'open_category', 'category': '49654'}
