@@ -9,13 +9,12 @@ class Cfg:
         self.config.read(self.filename, encoding='utf-8')
 
         self.TOKEN = self.config.get('DEFAULT', 'TOKEN')
-        self.ADMINS = list(self.config.get('DEFAULT', 'ADMINS').split(','))
+        self.ADMINS = list(map(int, self.config.get('DEFAULT', 'ADMINS').split(',')))
         self.REQUIRED_SUBSCRIPTIONS = self.config.get('DEFAULT', 'REQUIRED_SUBSCRIPTIONS')
         self.NEW_USER_NOTIFICATIONS = self.config.get('DEFAULT', 'NEW_USER_NOTIFICATIONS')
         self.GIFT_PROCENT_REFERAL = int(self.config.get('DEFAULT', 'GIFT_PROCENT_REFERAL'))
         self.WATERMARK = self.config.get('DEFAULT', 'WATERMARK')
 
-        # Данные на случай использования aaio в качестве Платежной системы
         self.SECRET_KEY = self.config.get('DEFAULT', "SECRET_AAIO")
         self.MERCHANT_ID = self.config.get('DEFAULT', 'MERCHANT_ID')
 
