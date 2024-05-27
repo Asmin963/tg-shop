@@ -34,7 +34,7 @@ admin_commands = [
 ]
 
 for chat_id in cfg.ADMINS:
-    bot.set_my_commands(admin_commands, scope=telebot.types.BotCommandScopeChat(chat_id=chat_id))
+    bot.set_my_commands(commands=admin_commands, scope=telebot.types.BotCommandScopeChat(chat_id=chat_id))
 
-bot.set_my_commands(private_commands, scope=telebot.types.BotCommandScopeAllPrivateChats())
+bot.set_my_commands(commands=private_commands, scope=telebot.types.BotCommandScopeAllPrivateChats())
 
