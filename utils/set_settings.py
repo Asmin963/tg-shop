@@ -5,14 +5,14 @@ from config import cfg
 
 private_commands = [
     BotCommand(
-        command='start.bat',
+        command='start',
         description='Запуск/Перезапуск 🚀'
     )
 ]
 
 admin_commands = [
     BotCommand(
-        command='start.bat',
+        command='start',
         description='Запуск/Перезапуск 🚀'
     ),
     BotCommand(
