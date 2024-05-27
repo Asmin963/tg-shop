@@ -9,7 +9,7 @@ class Cfg:
         self.config.read(self.filename, encoding='utf-8')
 
         self.TOKEN = self.config.get('DEFAULT', 'TOKEN')
-        self.ADMINS = list(map(int, self.config.get('DEFAULT', 'ADMINS').split(',')))
+        self.ADMINS = self.config.get('DEFAULT', 'ADMINS').split(',')
         self.REQUIRED_SUBSCRIPTIONS = self.config.get('DEFAULT', 'REQUIRED_SUBSCRIPTIONS')
         self.NEW_USER_NOTIFICATIONS = self.config.get('DEFAULT', 'NEW_USER_NOTIFICATIONS')
         self.GIFT_PROCENT_REFERAL = int(self.config.get('DEFAULT', 'GIFT_PROCENT_REFERAL'))
