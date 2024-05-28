@@ -1,5 +1,3 @@
 pyTelegramBotAPI
-hashlib
-urllib
 configparser
 colorama
