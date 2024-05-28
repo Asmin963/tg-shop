@@ -1,4 +1,7 @@
 class Pay:
+    """
+    Класс для работы с платежными системами
+    """
     def __init__(self):
         self.merchant_id = ""
         pass

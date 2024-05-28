@@ -12,6 +12,8 @@ class Cfg:
         self.ADMINS = self.config.get('DEFAULT', 'ADMINS').split(',')
         if all(a.isdigit() for a in self.ADMINS):
             self.ADMINS = list(map(int, self.ADMINS))
+        else:
+            self.ADMINS = []
         self.REQUIRED_SUBSCRIPTIONS = self.config.get('DEFAULT', 'REQUIRED_SUBSCRIPTIONS')
         self.NEW_USER_NOTIFICATIONS = self.config.get('DEFAULT', 'NEW_USER_NOTIFICATIONS')
         self.GIFT_PROCENT_REFERAL = int(self.config.get('DEFAULT', 'GIFT_PROCENT_REFERAL'))
