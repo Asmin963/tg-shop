@@ -66,7 +66,10 @@ class ProductsInfo:
 
     def get_product(self, category_id, argument=None, value=None) -> dict:
         try:
-            products = next((cat["products"] for cat in self.products if cat["id"] == str(category_id)), [])
+            products = self.read_all_products()
+            if not products:
+                return {}
+            products = next((cat["products"] for cat in products if cat["id"] == str(category_id)), [])
             if argument and value:
                 for prod in products:
                     if prod.get(argument) == value:
