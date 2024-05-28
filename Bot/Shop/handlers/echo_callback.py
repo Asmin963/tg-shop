@@ -5,7 +5,7 @@ from config import cfg
 from Bot.Shop.tools import argment_from_callback
 from .users import profile
 import time
-from .admins import add_product, handler_products
+from .admins import add_product
 
 TIME_LIMIT = 0.5
 
