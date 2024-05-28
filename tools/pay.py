@@ -31,9 +31,21 @@ class Pay:
         return True
 
     def get_order(self):
+        """
+
+        Метод для получения заказа
+        (Не реализован)
+
+        """
         return True
 
     def get_orders(self):
+        """
+
+        Метод для получения списка заказов
+        (Не реализован)
+
+        """
         return True
 
 
