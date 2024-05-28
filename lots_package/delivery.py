@@ -8,7 +8,6 @@ import os
 from .info_product import ProductsInfo
 from bot import bot
 from database import dbase as db
-from lots_package import products_json, favorite_products
 
 
 Pi = ProductsInfo()
