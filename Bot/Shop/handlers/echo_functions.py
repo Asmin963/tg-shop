@@ -10,8 +10,6 @@ from telebot.types import InlineKeyboardMarkup as K, InlineKeyboardButton as B
 from Bot.Payment import OrdersBotHandler, JSON_Orders
 from .users import basefunc
 
-
-
 from lots_package import delivery_products
 
 
