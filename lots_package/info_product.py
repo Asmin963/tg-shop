@@ -68,12 +68,9 @@ class ProductsInfo:
         try:
             products = next((cat["products"] for cat in self.products if cat["id"] == str(category_id)), [])
             if argument and value:
-                for prod in products:
-                    if prod.get(argument) == value:
-                        return prod
-                return {}
+                return next((prod for prod in products if prod[argument] == str(value)), {})
             else:
-                return products[0]
+                return products
         except Exception as e:
             log(f"Ошибка при получении товаров из категории - {e}", lvl=2)
             return {}

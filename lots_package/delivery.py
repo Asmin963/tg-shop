@@ -8,6 +8,7 @@ import os
 from .info_product import ProductsInfo
 from bot import bot
 from database import dbase as db
+from lots_package import products_json, favorite_products
 
 
 Pi = ProductsInfo()
@@ -264,9 +265,8 @@ class FavoriteProducts:
                 if product_id in ids:
                     log(f'Товар {product_id} уже есть в избранном', lvl=2)
                     return f'❌ *Товар* `{product_id}` *уже есть в избранном*'
-            log(f'{str(category), "id", str(product_id)}')
             product = Pi.get_product(str(category), "id", str(product_id))
-            log(f'Данные на сохранение - {product}')
+            log(f'Данные на сохранение в избранное - {product}\nАргументы - {str(category), "id", str(product_id)}')
             self.data[user_id].append({
                 'name': product['name'],
                 'category': category,

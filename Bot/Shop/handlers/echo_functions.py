@@ -155,7 +155,6 @@ class EchoFunctions:
         """
         try:
             product_id = product_id
-            product = products_json.get_product(category_id, "id", product_id)
             user_id = call.message.chat.id
             add = favorite_products.save_favorite_product(user_id=user_id, category=category_id, product_id=product_id)
 

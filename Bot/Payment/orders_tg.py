@@ -80,6 +80,8 @@ class OrdersBotMessageHandler:
             bot.send_message(referal, f'*🥳 Пользователь - 6034429696 пополнил баланс! На ваш счет зачислено* `{procent}` рублей!', parse_mode='Markdown')
         else:
             log(referal)
+        buys = db.get_user_column(user_id, 'buys')
+        db.update_user_column(user_id, 'buys', buys + 1)
         return True
 
     def check_status_payment(self, order_id):

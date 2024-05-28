@@ -15,7 +15,7 @@ class PromoPanelMessages:
         @self.bot.message_handler(commands=['add_promo'], func=lambda m: m.chat.id == self.admin)
         def add_promo_command_handler(message: types.Message):
             self.bot.send_message(message.chat.id,
-                                  '🔑 *Введите промокод в формате:*\n\n`(промокод)` `(кол-во токенов)` `(кол-во использований)`',
+                                  '🔑 *Введите промокод в формате:*\n\n`(промокод)` `(бонус в рублях)` `(кол-во использований)`',
                                   parse_mode='Markdown', reply_markup=types.ReplyKeyboardRemove())
             self.bot.register_next_step_handler(message, self.final_add_promo)
 
